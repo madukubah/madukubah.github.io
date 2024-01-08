@@ -1,0 +1,71 @@
+[
+    {
+        "name" : "KNN ALGORITHM",
+        "date" : "April 2019",
+        "desc" : "<i>the k-nearest neighbors algorithm (k-NN) is a non-parametric method used for classification and regression.</i> <br>I applied this algorithm in scholarship awarding to determine whether students were entitled to receive scholarships by assessing the proximity of their data to the data records of experts, based on Euclidean distances.",
+        "src" : [
+            {
+                "name" : "github",
+                "link" : "https://github.com/madukubah/knn_algorithm"
+                
+            }
+        ]
+    },
+    {
+        "name" : "TREND LEAST SQUARE (TLS)",
+        "date" : "September 2019",
+        "desc" : "<i>Least Square is the method for finding the best fit of a set of data points.</i> <br>I apply this algorithm to predict how many product sales for the next month, which will be used as the basis for determining product stock.",
+        "src" : [
+            {
+                "name" : "github",
+                "link" : "https://github.com/madukubah/trend_least_square"
+                
+            }
+        ]
+    },
+    {
+        "name" : "INSTABOT",
+        "date" : "January 2019",
+        "desc" : "<i>bot for auto like, auto follow and auto comment.</i> <br>I create web crawler using <b>Selenium</b> and <b>Ruby</b>. Perform some human like interaction such as like , message, and follow someone IG account",
+        "src" : [
+            {
+                "name" : "github",
+                "link" : "https://github.com/madukubah/instabot"
+            },
+            {
+                "name" : "video",
+                "link" : "https://youtu.be/HquphMXJya0"
+            }
+        ]
+    },
+    {
+        "name" : "INSTANALITIC",
+        "date" : "November 2020",
+        "desc" : "<i>instagram users Analytic.</i> <br> As a continuation of the bot project, i build an app to analyze instagram users based on their image post tags. collect bunch of data using bot, cleaning the data and analize it using clustering algorithm",
+        "src" : [
+            {
+                "name" : "Dashboard",
+                "link" : "https://github.com/madukubah/instanalitic.git"
+            },
+            {
+                "name" : "Clustering",
+                "link" : "https://github.com/madukubah/Spark-Instagram-Clustering.git"
+            },
+            {
+                "name" : "Classification",
+                "link" : "https://github.com/madukubah/Spark-Instagram-Classification.git"
+            }
+        ]
+    },
+    {
+        "name" : "MUEZZA RUN",
+        "date" : "September 2018",
+        "desc" : "<i>endless run game, collect coins and exchange it with game city tokens .</i> <br> I create an endless running game using <b>Unity 3D</b> and program it using <b>C#</b> language",
+        "src" : [
+            {
+                "name" : "game",
+                "link" : "https://play.google.com/store/apps/details?id=com.vreman.muezzarunrun"
+            }
+        ]
+    }
+]

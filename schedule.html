@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madukubah Home Page - Just Do IT</title>
+  </head>
+  <style>
+    li {
+      margin-bottom: 12px;
+    }
+  </style>
+  <body>
+    <h2>Schedules</h2>
+    <div id="post">
+      <ul id="post-item" >
+      </ul>
+    </div>
+    
+  </body>
+  <script>
+    
+    const filePath = './schedule.json';
+    fetch(filePath)
+    .then(response => response.json())
+    .then(jsonData => {
+      console.log('Parsed JSON data:', jsonData);
+      var html = "";
+      const container = document.getElementById('post-item');
+      jsonData.forEach(item => {
+        const newItem = document.createElement('li');
+        newItem.innerHTML = "";
+        newItem.innerHTML += "<b>" + item["name"] + "</b>" ;
+        newItem.innerHTML += "<br>";
+        newItem.innerHTML += item["date"];
+        newItem.innerHTML += "<br>";
+        newItem.innerHTML += "src: " + item["src"].map(x => '<a target="blank" href="'+x["link"]+'">'+x["name"]+'</a>');
+        newItem.innerHTML += "<br>";
+        container.appendChild(newItem);
+      });
+    })
+    .catch(error => console.error('Error fetching or parsing JSON:', error));
+  </script>
+</html>
