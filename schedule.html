@@ -25,7 +25,6 @@
     .then(response => response.json())
     .then(jsonData => {
       console.log('Parsed JSON data:', jsonData);
-      var html = "";
       const container = document.getElementById('post-item');
       jsonData.forEach(item => {
         const newItem = document.createElement('li');

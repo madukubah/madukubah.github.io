@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body style="font-size: 12px;" >
+    <div class="s1" style="text-align: center;" >
+      <h1 style="margin-bottom: 0px;padding-bottom: 0px;">Muhammad Alfalah Madukubah</h1>
+      <hr>
+      Email: <a style="text-decoration: none;" href="mailto:muhalfalah1998@gmail.com">muhalfalah1998@gmail.com</a>
+      &nbsp; | &nbsp;
+      Github: <a style="text-decoration: none;" href="https://github.com/madukubah">madukubah</a>
+      &nbsp; | &nbsp;
+      LinkedIn: <a style="text-decoration: none;" href="https://www.linkedin.com/in/muh-alfalah-198657132/">muh-alfalah</a>
+      <hr>
+    </div>
+
+    <div id="works">
+      <h3 style="margin-bottom: 0px;padding-bottom: 0px;">Work Experiences</h3>
+      <ul style="margin-top: 4px;" id="work-item" >
+      </ul>
+    </div>
+    
+    <div id="work-projects">
+      <hr>
+      <h3 style="margin-bottom: 0px;padding-bottom: 0px;">Work Projects</h3>
+      <ul style="margin-top: 4px;" id="work-project-item" >
+      </ul>
+    </div>
+
+    <div id="projects">
+      <hr>
+      <h3 style="margin-bottom: 0px;padding-bottom: 0px;">Open Source Projects</h3>
+      <ul style="margin-top: 4px;" id="project-item" >
+      </ul>
+    </div>
+    
+    <div id="educations">
+      <hr>
+      <h3 style="margin-bottom: 0px;padding-bottom: 0px;">Educations</h3>
+      <ul style="margin-top: 4px;" id="education-item" >
+      </ul>
+    </div>
+
+    <div id="publications">
+      <hr>
+      <h3 style="margin-bottom: 0px;padding-bottom: 0px;">Publications</h3>
+      <ul style="margin-top: 4px;" id="publication-item" >
+      </ul>
+    </div>
+
+    <div id="awards">
+      <hr>
+      <h3 style="margin-bottom: 0px;padding-bottom: 0px;">Awards</h3>
+      <ul style="margin-top: 4px;" id="award-item" >
+      </ul>
+    </div>
+
+
+    <div id="events">
+      <hr>
+      <h3 style="margin-bottom: 0px;padding-bottom: 0px;">Events</h3>
+      <ul style="margin-top: 4px;" id="event-item" >
+      </ul>
+    </div>
+
+    <div id="volunteerings">
+      <hr>
+      <h3 style="margin-bottom: 0px;padding-bottom: 0px;">Volunteering</h3>
+      <ul style="margin-top: 4px;" id="volunteering-item" >
+      </ul>
+    </div>
+
+    <div id="languages">
+      <hr>
+      <h3 style="margin-bottom: 0px;padding-bottom: 0px;">Languages</h3>
+      <ul style="margin-top: 4px;" id="languages-item" >
+        <li>Indonesian(Native), English(Intermediate)</li>
+      </ul>
+    </div>
+
+  </body>
+  <script>
+    var filePath = './works.json';
+    fetch(filePath)
+    .then(response => response.json())
+    .then(jsonData => {
+      var html = "";
+      const container = document.getElementById('work-item');
+      jsonData.forEach(item => {
+        const newItem = document.createElement('li');
+        newItem.innerHTML = "";
+        newItem.innerHTML += "<b>" + item["name"] + "</b>" ;
+        newItem.innerHTML += "<br>";
+        newItem.innerHTML += item["place"];
+        newItem.innerHTML += "<br>";
+        newItem.innerHTML += item["date"];
+        newItem.innerHTML += "<br>";
+        newItem.innerHTML += item["details"].map(x => x).join(" ") ;
+        newItem.innerHTML += "<br>";
+        container.appendChild(newItem);
+      });
+    })
+    .catch(error => console.error('Error fetching or parsing JSON:', error));
+  </script>
+  <script>
+    var filePath = './work-projects.json';
+    fetch(filePath)
+    .then(response => response.json())
+    .then(jsonData => {
+      var html = "";
+      const container = document.getElementById('work-project-item');
+      jsonData.forEach(item => {
+        const newItem = document.createElement('li');
+        newItem.innerHTML = "";
+        newItem.innerHTML += "<b>" + item["name"] + "</b>" ;
+        newItem.innerHTML += "<br>";
+        newItem.innerHTML += item["place"];
+        newItem.innerHTML += "<br>";
+        newItem.innerHTML += item["details"].map(x => x).join(" ") ;
+        newItem.innerHTML += "<br>";
+        container.appendChild(newItem);
+      });
+    })
+    .catch(error => console.error('Error fetching or parsing JSON:', error));
+  </script>
+  <script>
+    var filePath = './portofolio.json';
+    fetch(filePath)
+    .then(response => response.json())
+    .then(jsonData => {
+      var html = "";
+      const container = document.getElementById('project-item');
+      jsonData.forEach(item => {
+        const newItem = document.createElement('li');
+        newItem.innerHTML = "";
+        newItem.innerHTML += "<b>" + item["name"] + "</b>" ;
+        newItem.innerHTML += "<br>";
+        newItem.innerHTML += item["date"];
+        newItem.innerHTML += "<br>";
+        newItem.innerHTML += item["desc"];
+        newItem.innerHTML += "<br>";
+        newItem.innerHTML += "src: " + item["src"].map(x => '<a target="blank" href="'+x["link"]+'">'+x["name"]+'</a>');
+        newItem.innerHTML += "<br>";
+        container.appendChild(newItem);
+      });
+    })
+    .catch(error => console.error('Error fetching or parsing JSON:', error));
+  </script>
+  <script>
+    var filePath = './awards.json';
+    fetch(filePath)
+    .then(response => response.json())
+    .then(jsonData => {
+      var html = "";
+      const container = document.getElementById('award-item');
+      jsonData.forEach(item => {
+        const newItem = document.createElement('li');
+        newItem.innerHTML = "";
+        newItem.innerHTML += item;
+        container.appendChild(newItem);
+      });
+    })
+    .catch(error => console.error('Error fetching or parsing JSON:', error));
+  </script>
+  <script>
+    var filePath = './publications.json';
+    fetch(filePath)
+    .then(response => response.json())
+    .then(jsonData => {
+      var html = "";
+      const container = document.getElementById('publication-item');
+      jsonData.forEach(item => {
+        const newItem = document.createElement('li');
+        newItem.innerHTML = "";
+        newItem.innerHTML += item;
+        container.appendChild(newItem);
+      });
+    })
+    .catch(error => console.error('Error fetching or parsing JSON:', error));
+  </script>
+  <script>
+    var filePath = './educations.json';
+    fetch(filePath)
+    .then(response => response.json())
+    .then(jsonData => {
+      var html = "";
+      const container = document.getElementById('education-item');
+      jsonData.forEach(item => {
+        const newItem = document.createElement('li');
+        newItem.innerHTML = "";
+        newItem.innerHTML += "<b>" + item["name"] + "</b>" ;
+        newItem.innerHTML += "<br>";
+        newItem.innerHTML += item["place"];
+        newItem.innerHTML += "<br>";
+        newItem.innerHTML += item["date"];
+        newItem.innerHTML += "<br>";
+        newItem.innerHTML += item["details"].map(x => x).join("<br>") ;
+        newItem.innerHTML += "<br>";
+        container.appendChild(newItem);
+      });
+    })
+    .catch(error => console.error('Error fetching or parsing JSON:', error));
+  </script>
+  <script>
+    var filePath = './volunteerings.json';
+    fetch(filePath)
+    .then(response => response.json())
+    .then(jsonData => {
+      var html = "";
+      const container = document.getElementById('volunteering-item');
+      jsonData.forEach(item => {
+        const newItem = document.createElement('li');
+        newItem.innerHTML = "";
+        newItem.innerHTML += "<b>" + item["name"] + "</b>" ;
+        newItem.innerHTML += "<br>";
+        newItem.innerHTML += item["place"];
+        newItem.innerHTML += "<br>";
+        newItem.innerHTML += item["details"].map(x => x).join(" ") ;
+        newItem.innerHTML += "<br>";
+        container.appendChild(newItem);
+      });
+    })
+    .catch(error => console.error('Error fetching or parsing JSON:', error));
+  </script>
+  <script>
+    var filePath = './events.json';
+    fetch(filePath)
+    .then(response => response.json())
+    .then(jsonData => {
+      var html = "";
+      const container = document.getElementById('event-item');
+      jsonData.forEach(item => {
+        const newItem = document.createElement('li');
+        newItem.innerHTML = "";
+        newItem.innerHTML += item;
+        container.appendChild(newItem);
+      });
+    })
+    .catch(error => console.error('Error fetching or parsing JSON:', error));
+  </script>
+  </html>
+  
+  

@@ -1,0 +1,48 @@
+[
+    {
+        "name" : "Freelance programmer",
+        "date" : "Aug 2021 - Present",
+        "place" : "Self-employed, Kendari, Indonesia",
+        "details" : [
+          "Developed ERP Systems using odoo.",
+          "Worked as fullstack developer who build the back end and the front end together.",
+          "Designed, developed, maintained, and updated client websites.",
+          "Tech stack used was Python, JavaScript, and Odoo."
+        ]
+    },
+    {
+        "name" : "Full Stack Developer",
+        "date" : "Feb 2020 - Mar 2021",
+        "place" : "TECHNOINDO, Kendari, Indonesia",
+        "details" : [
+          "Developed ERP Systems for Mining Management using odoo.",
+          "Create some custom module to catalizing their work to defined ore stock and find it cost.",
+          "Developed dashboard using chart js combining with odoo module structure implement some odoo main module such as Sales, Purchase, Inventory, HR, and absolutely Accounting.",
+          "Used DigitalOcean for hosting.",
+          "Tech stack used was Python, JavaScript, Flutter, Data Engineering, and Odoo."
+        ]
+    },
+    {
+        "name" : "Freelance programmer",
+        "date" : "Aug 2019 - Feb 2020",
+        "place" : "Self-employed, Kendari, Indonesia",
+        "details" : [
+          "Worked as fullstack developer who build the back end and the front end together.",
+          "Developed Web API using laravel and mix it with JWT for user autentification.",
+          "Used flutter for the front end.",
+          "Used DigitalOcean for hosting."
+        ]
+    },
+    {
+        "name" : "Staff Software Engineer",
+        "date" : "Nov 2017 - Aug 2019",
+        "place" : "Techno's Studio, Kendari, Indonesia",
+        "details" : [
+          "Designed, developed, maintained, and updated websites.",
+          "Conducted unit testing to deliver optimal browser functionality.",
+          "Responsible for Website and software application designing, building, and maintaining.",
+          "Coded, designed, and laid out websites according to a company’s specifications.",
+          "Took into consideration user experience and function, graphic design, and computer programming."
+        ]
+    }
+]

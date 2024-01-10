@@ -1,0 +1,54 @@
+[
+    {
+      "name" : "ERP Sinar Jaya Sultra Utama",
+      "place" : "Technoindo",
+      "details" : [
+        "Developed ERP Systems for Mining Management using odoo.",
+        "Improved accounting performance, provided paperless work the company could be tracking dump trucks and heavy equipment easily. The system has now reduced the company’s overall operational costs and improved accuracy and efficiency."
+      ]
+    },
+    {
+      "name" : "e-absen fingerprint",
+      "place" : "Freelance",
+      "details" : [
+        "Work as Fullstack Developer.",
+        "I worked on this project by integrating the fingerprints in each SKPD into a website so the regent able to know the attendances of his employees.",
+        "Technology used: PHP, CodeIgniter."
+      ]
+    },
+    {
+        "name" : "SISA (City Garbage Collector App)",
+        "place" : "Technoindo",
+        "details" : [
+          "Worked as fullstack developer who build the back end and the front end. ",
+          "SISA is a Garbage Information System that created an efficient recycling system that is easily accessible anywhere and anytime, connecting people to form a solid foundation for the environment, and striving to make the world this is a better place.",
+          "Technology used: PHP, Larave, Flutter"
+        ]
+    },
+    {
+      "name" : "Si-Umah",
+      "place" : "Freelance",
+      "details" : [
+        "Work as Fullstack Developer.",
+        "Si Umah Is an information system that helps Dinas Perumahan dan kawasan Permukiman Kabupaten Konawe Utara manage the receipt of assistance for Non-livable Houses (RTLH).",
+        "Technology used: PHP, CodeIgniter."
+      ]
+    },
+    {
+      "name" : "GIS Perkim Bau-Bau",
+      "place" : "Freelance",
+      "details" : [
+        "Work as Flutter Developer.",
+        "the app is an information system that mapping slum area in Bau-Bau city, Indonesia."
+      ]
+    },
+    {
+      "name" : "Co-Kost",
+      "place" : "Freelance",
+      "details" : [
+        "Work as Fullstack Developer.",
+        "application that help people to find homestay.",
+        "Technology used: PHP, CodeIgniter, Kotlin, Android Studio."
+      ]
+    }
+]
