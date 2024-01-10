@@ -52,12 +52,14 @@
       
   
       <div id="essay1">
-        It`s been <b><span id="yearOfWork"></span> years</b> since i start my career in software development in 2017. 
-        I am skilled in <b> Python, PHP, and JS </b>.
-        Most of my work involves <b> Odoo, Laravel, and React</b> development, making me a full-stack developer.
-        I am <b> curious </b> about <u> Functional Programming, Low-level Code, and Tiny Systems </u>, and I am actively learning more about these fields. I hope to work in these areas in the future.
-        Practice in <b><a href="https://exercism.org/profiles/madukubah">exercism</a></b>, a cool website that helps me improve my coding skills.
-        Apart from my professional interests, I love running and swimming
+        <p style="text-align: justify;">
+          It`s been <b><span id="yearOfWork"></span> years</b> since i start my career in software development in 2017. 
+          I am skilled in <b> Python, PHP, and JS </b>.
+          Most of my work involves <b> Odoo, Laravel, and React</b> development, making me a full-stack developer.
+          I am <b> curious </b> about <u> Functional Programming, Low-level Code, and Tiny Systems </u>, and I am actively learning more about these fields. I hope to work in these areas in the future.
+          Practice in <b><a href="https://exercism.org/profiles/madukubah">exercism</a></b>, a cool website that helps me improve my coding skills.
+          Apart from my professional interests, I love running and swimming
+        </p>
       </div>
   
       <h2>Portfolios</h2>
@@ -124,9 +126,8 @@
         newItem.innerHTML += "<br>";
         newItem.innerHTML += item["date"];
         newItem.innerHTML += "<br>";
-        newItem.innerHTML += item["desc"];
-        newItem.innerHTML += "<br>";
-        newItem.innerHTML += "src: " + item["src"].map(x => '<a target="blank" href="'+x["link"]+'">'+x["name"]+'</a>');
+        newItem.innerHTML += "<p style='text-align: justify; margin: 0px; margin-bottom: 0px'>" + item["desc"] + "</p>";
+        newItem.innerHTML += "src: " + item["src"].map(x => '<a target="blank" href="'+x["link"]+'">'+x["name"]+'</a>').join(", ");
         newItem.innerHTML += "<br>";
         container.appendChild(newItem);
       });
