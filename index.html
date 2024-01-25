@@ -23,18 +23,9 @@
       }
     </style>
   </head>
-  <body>
+  <body >
     <div class="content">
       <div width="100%">
-        <div class="stream" style="float:right">
-          <h4>My schedule</h4>
-          <ul>
-            <li>
-              Conquer the Exercism Haskell tasks
-            </li>
-          </ul>
-          <a href="./schedule.html">see all</a>
-        </div>
         <div class="s1" >
           <img src="https://avatars.githubusercontent.com/u/34237104?s=400&u=9bb0e94e3f34784b23e28b9e2268ba71f1885d05&v=4" alt="Photo of Madukubah" width="150" height="auto">
           <h1>Muhammad Alfalah Madukubah</h1>
@@ -67,6 +58,12 @@
         <ul id="post-item" >
         </ul>
       </div>
+
+      <h2>Schedules</h2>
+      <div id="schedules">
+        <ul id="schedule-item" >
+        </ul>
+      </div>
     </div>
   </body>
   <script>
@@ -76,13 +73,10 @@
       iframe.style.display = 'none';
       document.body.appendChild(iframe);
   
-      // Fetch the HTML file as text
       fetch(filePath)
         .then(response => response.text())
         .then(htmlContent => {
-          // Set HTML content with scripts using srcdoc
           iframe.srcdoc = htmlContent;
-          // Wait for scripts to load and execute
           iframe.onload = function() {
             setTimeout(function() {
               const options = {
@@ -95,7 +89,6 @@
                 pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
               };
   
-              // Convert HTML to PDF using html2pdf with options
               html2pdf()
                 .from(iframe.contentDocument.body)
                 .set(options)
@@ -113,7 +106,7 @@
     var yearOfWork = document.getElementById("yearOfWork");
     yearOfWork.textContent = new Date().getFullYear() - 2017
 
-    const filePath = './portofolio.json';
+    var filePath = './portofolio.json';
     fetch(filePath)
     .then(response => response.json())
     .then(jsonData => {
@@ -134,4 +127,24 @@
     })
     .catch(error => console.error('Error fetching or parsing JSON:', error));
   </script>
+    <script>
+      var filePath = './schedule.json';
+      fetch(filePath)
+      .then(response => response.json())
+      .then(jsonData => {
+        const container = document.getElementById('schedule-item');
+        jsonData.forEach(item => {
+          const newItem = document.createElement('li');
+          newItem.innerHTML = "";
+          newItem.innerHTML += "<b>" + item["name"] + "</b>" ;
+          newItem.innerHTML += "<br>";
+          newItem.innerHTML += item["date"];
+          newItem.innerHTML += "<br>";
+          newItem.innerHTML += "src: " + item["src"].map(x => '<a target="blank" href="'+x["link"]+'">'+x["name"]+'</a>');
+          newItem.innerHTML += "<br>";
+          container.appendChild(newItem);
+        });
+      })
+      .catch(error => console.error('Error fetching or parsing JSON:', error));
+    </script>
 </html>
