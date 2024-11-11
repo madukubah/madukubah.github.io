@@ -47,8 +47,7 @@
           It`s been <b><span id="yearOfWork"></span> years</b> since i start my career in software development in 2017. 
           I am skilled in <b> Python, PHP, and JS </b>.
           Most of my work involves <b> Odoo, Laravel, and React</b> development, making me a full-stack developer.
-          I am <b> curious </b> about <u> Functional Programming, Low-level Code, and Tiny Systems </u>, and I am actively learning more about these fields. I hope to work in these areas in the future.
-          Practice in <b><a href="https://exercism.org/profiles/madukubah">exercism</a></b>, a cool website that helps me improve my coding skills.
+          I am <b> curious </b> about <u> Low Level Programming and Tiny Systems </u>, and I am actively learning more about these fields. I plan to work in these areas in the future.
           Apart from my professional interests, I love running and swimming
         </p>
       </div>
@@ -58,12 +57,7 @@
         <ul id="post-item" >
         </ul>
       </div>
-
-      <h2>Schedules</h2>
-      <div id="schedules">
-        <ul id="schedule-item" >
-        </ul>
-      </div>
+      
     </div>
   </body>
   <script>
@@ -127,24 +121,4 @@
     })
     .catch(error => console.error('Error fetching or parsing JSON:', error));
   </script>
-    <script>
-      var filePath = './schedule.json';
-      fetch(filePath)
-      .then(response => response.json())
-      .then(jsonData => {
-        const container = document.getElementById('schedule-item');
-        jsonData.forEach(item => {
-          const newItem = document.createElement('li');
-          newItem.innerHTML = "";
-          newItem.innerHTML += "<b>" + item["name"] + "</b>" ;
-          newItem.innerHTML += "<br>";
-          newItem.innerHTML += item["date"];
-          newItem.innerHTML += "<br>";
-          newItem.innerHTML += "src: " + item["src"].map(x => '<a target="blank" href="'+x["link"]+'">'+x["name"]+'</a>');
-          newItem.innerHTML += "<br>";
-          container.appendChild(newItem);
-        });
-      })
-      .catch(error => console.error('Error fetching or parsing JSON:', error));
-    </script>
 </html>

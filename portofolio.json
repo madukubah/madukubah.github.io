@@ -1,24 +1,13 @@
 [
+    
     {
-        "name" : "KNN ALGORITHM",
-        "date" : "April 2019",
-        "desc" : "<i>the k-nearest neighbors algorithm (k-NN) is a non-parametric method used for classification and regression.</i> <br>I applied this algorithm in scholarship awarding to determine whether students were entitled to receive scholarships by assessing the proximity of their data to the data records of experts, based on Euclidean distances.",
+        "name" : "MADLOX PROGRAMMING LANGUAGE",
+        "date" : "June 201924",
+        "desc" : "<i>Implement crafting interpreters by robert nystrom.</i> <br>Creating programing language from scratch. first implement a Tree-walk Interpreter using Java. second implement a Bytecode Virtual machine using C.",
         "src" : [
             {
                 "name" : "github",
-                "link" : "https://github.com/madukubah/knn_algorithm"
-                
-            }
-        ]
-    },
-    {
-        "name" : "TREND LEAST SQUARE (TLS)",
-        "date" : "September 2019",
-        "desc" : "<i>Least Square is the method for finding the best fit of a set of data points.</i> <br>I apply this algorithm to predict how many product sales for the next month, which will be used as the basis for determining product stock.",
-        "src" : [
-            {
-                "name" : "github",
-                "link" : "https://github.com/madukubah/trend_least_square"
+                "link" : "https://github.com/madukubah/madlox"
                 
             }
         ]
@@ -54,6 +43,30 @@
             {
                 "name" : "Classification",
                 "link" : "https://github.com/madukubah/Spark-Instagram-Classification.git"
+            }
+        ]
+    },
+    {
+        "name" : "KNN ALGORITHM",
+        "date" : "April 2019",
+        "desc" : "<i>the k-nearest neighbors algorithm (k-NN) is a non-parametric method used for classification and regression.</i> <br>I applied this algorithm in scholarship awarding to determine whether students were entitled to receive scholarships by assessing the proximity of their data to the data records of experts, based on Euclidean distances.",
+        "src" : [
+            {
+                "name" : "github",
+                "link" : "https://github.com/madukubah/knn_algorithm"
+                
+            }
+        ]
+    },
+    {
+        "name" : "TREND LEAST SQUARE (TLS)",
+        "date" : "September 2019",
+        "desc" : "<i>Least Square is the method for finding the best fit of a set of data points.</i> <br>I apply this algorithm to predict how many product sales for the next month, which will be used as the basis for determining product stock.",
+        "src" : [
+            {
+                "name" : "github",
+                "link" : "https://github.com/madukubah/trend_least_square"
+                
             }
         ]
     },
